@@ -11,7 +11,9 @@ router.use(cors({
   origin: "*"
 }));
 
-
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
 
 router.get('/read', async function(req, res, next) {
   try{
